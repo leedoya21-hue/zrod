@@ -1,0 +1,47 @@
+:root { 
+    --bg: #f8f9fa; --card: #ffffff; --primary: #1a73e8; --danger: #d93025; 
+    --success: #188038; --warning: #f29900; --sub-text: #5f6368; --border: #dadce0;
+}
+
+body { font-family: -apple-system, sans-serif; background: var(--bg); margin: 0; padding: 12px; color: #202124; line-height: 1.4; }
+.card { background: var(--card); padding: 18px; border-radius: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 12px; }
+.mini-card { padding: 10px 15px; }
+h2 { margin-top: 0; font-size: 0.9rem; color: var(--sub-text); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+hr { border: 0; border-top: 1px solid #eee; margin: 12px 0; }
+
+.category-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 2px solid transparent; border-radius: 12px; margin-bottom: 6px; cursor: pointer; background: #fcfcfc; }
+.category-item.selected { border-color: var(--primary); background: #e8f0fe; }
+.category-info { display: flex; flex-direction: column; pointer-events: none; }
+.category-name { font-weight: 700; font-size: 1rem; }
+.category-budget { font-size: 0.75rem; color: var(--sub-text); }
+.balance { font-weight: 800; font-size: 1.1rem; text-align: right; pointer-events: none; }
+
+input, select, button { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid var(--border); margin: 4px 0; box-sizing: border-box; font-size: 1rem; outline: none; }
+button { background: var(--primary); color: white; border: none; font-weight: bold; cursor: pointer; }
+
+.btn-confirm { background: var(--primary); margin-top: 10px; padding: 15px; font-size: 1.1rem; }
+.btn-outline { background: white; color: var(--sub-text); border: 1px solid var(--border); font-size: 0.85rem; }
+.btn-danger { background: var(--danger); color: white; }
+.btn-toggle { font-size: 0.7rem; padding: 4px 10px; width: auto; border-radius: 6px; }
+
+/* 항목 버튼군 */
+.btn-list { background: #e8f0fe; color: #1a73e8; border: none; padding: 6px 10px; border-radius: 6px; font-size: 0.7rem; width: auto; margin-left: 8px; font-weight: bold; }
+.btn-log { background: #e8eaed; color: #3c4043; border: none; padding: 6px 10px; border-radius: 6px; font-size: 0.7rem; width: auto; margin-left: 8px; }
+.btn-del { background: #fee; color: var(--danger); border: none; padding: 6px 10px; border-radius: 6px; font-size: 0.7rem; width: auto; margin-left: 8px; }
+
+/* 전용 UI 모달 */
+.full-screen-modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: var(--bg); z-index: 9999; padding: 20px; box-sizing: border-box; display: none; flex-direction: column; animation: slideUp 0.3s ease-out; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.editor-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.editor-title { font-size: 1.4rem; font-weight: 800; }
+.btn-close { background: none; color: #202124; font-size: 1.8rem; width: auto; border: none; padding: 0 10px; }
+
+/* 세부 항목 리스트 디자인 */
+.sub-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; background: white; border-radius: 10px; margin-bottom: 5px; border: 1px solid var(--border); }
+.log-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid var(--border); background: white; margin-bottom: 6px; border-radius: 12px; }
+.btn-del-mini { width: auto; padding: 5px 10px; font-size: 0.7rem; background: #fff; color: var(--danger); border: 1px solid #fad2cf; border-radius: 6px; margin-left: 5px; }
+
+.amount-control { display: flex; gap: 8px; align-items: center; }
+.btn-zero { width: 60px !important; background: #5f6368 !important; color: white !important; }
+.quick-buttons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 8px 0; }
+.quick-buttons button { background: #f1f3f4; color: #202124; border: 1px solid var(--border); padding: 10px; font-size: 0.9rem; }
