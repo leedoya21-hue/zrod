@@ -1,0 +1,15 @@
+{
+  "name": "나의 예산 관리자",
+  "short_name": "예산관리",
+  "start_url": "./지출관리.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a73e8",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2344/2344132.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
